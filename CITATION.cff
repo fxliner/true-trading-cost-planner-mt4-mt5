@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use True Trading Cost Planner in research or education, please cite this software."
+type: software
+title: "True Trading Cost Planner for MetaTrader 4 and 5"
+authors:
+  - name: "FOREXREVIEW.TOP"
+version: "1.20"
+repository-code: "https://github.com/fxliner/true-trading-cost-planner-mt4-mt5"
+url: "https://forexreview.top/"
+license: MIT
+keywords:
+  - MetaTrader
+  - forex
+  - position sizing
+  - trading costs
+  - risk management

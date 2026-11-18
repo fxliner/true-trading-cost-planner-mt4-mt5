@@ -53,4 +53,10 @@
 
 License: [MIT](LICENSE). Report issues using [GitHub Issues](https://github.com/fxliner/true-trading-cost-planner-mt4-mt5/issues/new/choose). Do not share passwords, account numbers or private trading data.
 
+## Release verification and citation
+
+The [release validator](scripts/verify_distribution.py) checks the MT4/MT5 files, individual SHA-256 hashes in [SHA256SUMS.txt](SHA256SUMS.txt), and local documentation links. The manifest lists checksums of **files inside the release ZIP**, not the ZIP download itself; Windows-style ZIP path separators are normalized during verification. No trading logic or v1.20 binaries are changed by these documentation checks.
+
+Run `python3 scripts/verify_distribution.py` from a clone, or see the [automated GitHub Actions check](.github/workflows/release-integrity.yml). For help see [SUPPORT.md](SUPPORT.md); researchers can use **Cite this repository**, powered by [CITATION.cff](CITATION.cff).
+
 **Disclaimer:** Values are estimates, not guaranteed fills or profit forecasts. They depend on broker contract specifications, quote freshness, costs, account currency and actual execution.
