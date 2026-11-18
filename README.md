@@ -1,44 +1,56 @@
-# True Trading Cost Planner - MT4 and MT5
+# True Trading Cost Planner — MT4 and MT5
 
-Free open-source MetaTrader 4 / MetaTrader 5 trade-planning indicator, version 1.20.
+**Free, open-source MetaTrader pre-trade cost and net risk/reward planner.** Model hypothetical BUY or SELL scenarios by dragging Entry, Stop Loss and Take Profit lines. This indicator does not place orders.
 
-Plan a hypothetical BUY or SELL with interactive entry, stop-loss and take-profit levels. Estimate position size using an equity risk percentage or fixed lots, then review gross and net risk/reward, break-even price and modeled trading costs.
+[**Download v1.20**](https://github.com/fxliner/true-trading-cost-planner-mt4-mt5/releases/tag/v1.20) · [**Full installation and calculation guide — FOREXREVIEW.TOP**](https://forexreview.top/2026/11/15/true-trading-cost-net-risk-reward-mt4-mt5/)
 
-## Main features
+## What it can calculate
 
-- Drag entry, stop and target lines directly on the chart, with BUY / SELL / RESET controls.
-- Model round-turn commission, additional fees and assumed slippage.
-- Compare gross versus net potential risk and reward and estimated net R:R.
-- Use broker symbol tick specifications where available, monitor current spread and optionally project swaps.
-- See calculation warnings for stale quotes, unverified fee assumptions and invalid price levels.
+- Position size using equity risk percentage or fixed lots.
+- Gross and estimated net risk/reward after round-turn commission, extra fees, assumed slippage and optional verified swap.
+- Break-even price, current Bid/Ask spread, and spread-observation insights.
+- Warnings about stale quotes, unverified commissions, invalid levels or unsuitable volume.
+- BUY, SELL and RESET controls. **No trade execution or price predictions.**
 
-**Important:** Results are estimates and depend on broker contract terms, account currency, actual execution and user inputs. The tool does not trade automatically or predict market direction.
+## Original MetaTrader 5 screenshot
 
-## Latest download
+![True Trading Cost Planner in MT5](Screenshot_MT5_TradingCost.png)
 
-Download the complete MT4/MT5 package from [GitHub Releases](https://github.com/fxliner/true-trading-cost-planner-mt4-mt5/releases/latest). The package includes source code, precompiled indicators, screenshots and the MIT license.
+*Original chart image shows a manual-symbol-spec simulation, not a live trading result.*
+
+### Details from the same image
+
+![Enlarged chart dashboard](screenshots/true-trading-cost-panel-detail.png)
+
+*Enlargement of the original screenshot, not a separate trade.*
+
+![Overnight and spread insights](screenshots/true-trading-cost-insights-detail.png)
+
+*Enlargement of the same original screenshot, not a separate trade.*
 
 ## Installation
 
-1. Download the latest ZIP from Releases or SourceForge Files.
-2. In MetaTrader use File > Open Data Folder.
-3. For MT4, copy the EX4 from bin/MT4 into MQL4/Indicators. For MT5, copy the EX5 from bin/MT5 into MQL5/Indicators.
-4. Restart or refresh Navigator > Indicators.
-5. Attach to a chart, set commissions and fees according to your broker, then select BUY or SELL and drag the levels.
+1. Download the [combined ZIP](https://github.com/fxliner/true-trading-cost-planner-mt4-mt5/releases/download/v1.20/true-trading-cost-planner-mt4-mt5-v1.20.zip).
+2. For **MT4**, copy the EX4 file in bin/MT4 to MQL4/Indicators; for **MT5**, copy the EX5 in bin/MT5 to MQL5/Indicators. Use **File > Open Data Folder**.
+3. Restart or refresh Navigator > Indicators; attach the indicator to a chart.
+4. Verify broker symbol specifications, commission and fees. Select BUY/SELL, move the lines, then inspect **net** R:R.
 
-MQL4 and MQL5 source code are provided in the respective platform folders. See LICENSE for MIT terms.
+## Technical documentation
 
-## Screenshot
+- [Installation and troubleshooting](docs/installation.md)
+- [Source parameter reference](docs/parameters.md)
+- [Cost model and assumptions](docs/cost-model.md)
+- [Hypothetical calculation examples](docs/examples.md)
+- [Frequently asked questions](docs/faq.md)
+- [Manual validation checklist](docs/validation.md)
 
-![Trade planning and cost calculations in MT5](Screenshot_MT5_TradingCost.png)
+## Official resources
 
-## Documentation and official downloads
-- Developer hub: https://forexreview.top/
-- Detailed installation and calculation guide: https://forexreview.top/2026/11/15/true-trading-cost-net-risk-reward-mt4-mt5/
-- Official MT5 Market download: https://www.mql5.com/en/market/product/209567
-- MQL5 Code Base: https://www.mql5.com/en/code/79598 and https://www.mql5.com/en/code/79600
-- Developer profile: https://www.mql5.com/en/users/fxliner
+- [MQL5 Market MT5](https://www.mql5.com/en/market/product/209567)
+- [MQL5 Code Base MT4](https://www.mql5.com/en/code/79598) and [MT5](https://www.mql5.com/en/code/79600)
+- [Full usage tutorial](https://forexreview.top/2026/11/15/true-trading-cost-net-risk-reward-mt4-mt5/)
+- [Trading tools and broker comparisons — FOREXREVIEW.TOP](https://forexreview.top/)
 
-For support, open a GitHub Issue or comment on the MQL5 product. Share symbol, account currency, input settings and an anonymized screenshot.
+License: [MIT](LICENSE). Report issues using [GitHub Issues](https://github.com/fxliner/true-trading-cost-planner-mt4-mt5/issues/new/choose). Do not share passwords, account numbers or private trading data.
 
-**Risk notice:** No guarantee of profitability. This indicator is for planning and education, not automated order placement.
+**Disclaimer:** Values are estimates, not guaranteed fills or profit forecasts. They depend on broker contract specifications, quote freshness, costs, account currency and actual execution.
